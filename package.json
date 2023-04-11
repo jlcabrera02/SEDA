@@ -1,0 +1,40 @@
+{
+  "name": "sedaserver",
+  "version": "1.0.0",
+  "description": "aplicación para servicios médicos",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node index.js",
+    "dev": "nodemon index.js --exec babel-node",
+    "build": "babel index.js --out-file index-compiled.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "jlcabrera02"
+  },
+  "keywords": [
+    "seda",
+    "enfermeria",
+    "servicios",
+    "cuidado"
+  ],
+  "author": "Jose Luis Cabrera Aguirre",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.2.0",
+    "sequelize": "^6.30.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.4",
+    "@babel/node": "^7.20.7",
+    "@babel/preset-env": "^7.21.4",
+    "nodemon": "^2.0.22"
+  }
+}
