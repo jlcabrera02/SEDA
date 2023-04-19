@@ -13,11 +13,11 @@ const port = process.env.PORT;
 
 app.use(morgan("dev"));
 
-sequelize
+/* sequelize
   .sync({ force: true })
   .then(() => console.log("Tablas creadas"))
   .catch((err) => console.log(err));
-
+ */
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());

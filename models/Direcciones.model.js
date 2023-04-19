@@ -1,3 +1,4 @@
+import { DataTypes } from "sequelize";
 import sequelize from "../configuration/dbConecction";
 
 const Direcciones = sequelize.define("Direcciones", {
