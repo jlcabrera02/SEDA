@@ -14,7 +14,7 @@ const sequelize = new Sequelize(
 
 sequelize
   .authenticate()
-  .then((suc) => console.log("Conexcion exitosa", suc))
+  .then(() => console.log("Conexcion exitosa"))
   .catch((err) => console.log(err));
 
 export default sequelize;

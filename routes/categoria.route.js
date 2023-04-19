@@ -14,3 +14,4 @@ route.put("/actualizar/:idCategoria", actualizarCat);
 route.delete("/eliminar/:idCategoria", eliminarCat);
 
 export default route;
+18;
