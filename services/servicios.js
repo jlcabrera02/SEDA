@@ -13,6 +13,14 @@ export const obtenerServicios = async () => {
   return crearServicio;
 };
 
+export const obtenerServicio = async (id) => {
+  const crearServicio = await Servicios.findOne({
+    where: { id },
+    include: { model: Categorias },
+  });
+  return crearServicio;
+};
+
 export const actualizarServicio = async (data, id) => {
   const actualizarInfo = await Servicios.update(data, { where: { id } });
   return actualizarInfo;

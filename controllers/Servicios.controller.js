@@ -1,6 +1,7 @@
 import {
   crearServicio,
   obtenerServicios,
+  obtenerServicio,
   actualizarServicio,
   eliminarServicio,
 } from "../services/servicios";
@@ -26,6 +27,16 @@ export const insertarServicio = async (req, res) => {
 export const buscarServicios = async (req, res) => {
   try {
     const servicios = await obtenerServicios();
+    res.json({ status: "ok", servicios }).status(200);
+  } catch (err) {
+    res.json({ status: false, msg: "Error con la consulta", err }).status(400);
+  }
+};
+
+export const buscarServicioById = async (req, res) => {
+  try {
+    const { idSer } = req.params;
+    const servicios = await obtenerServicio(idSer);
     res.json({ status: "ok", servicios }).status(200);
   } catch (err) {
     res.json({ status: false, msg: "Error con la consulta", err }).status(400);
